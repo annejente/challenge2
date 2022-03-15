@@ -1,0 +1,206 @@
+body{
+	background-color: #384c56;
+}
+
+.header { grid-area: header;
+}
+.clock { grid-area: main;
+}
+.footer { grid-area: menu;
+}
+.side { grid-area: side;
+}
+
+
+.header {
+	width:100%;
+	height: 100px;
+}
+
+#clock {
+  font-size: 50px;
+  height: 150px;
+  width: 100%;
+ /* text-align: center;*/
+  font: 50px/50px D-DIN-Bold,Arial,Verdana,sans-serif;
+  color: white;
+  align-items: center;
+}
+
+section#wakker {
+	width: 500px;
+	margin-left: 25px;
+	margin-right: 10px;
+}
+
+img#achtergrond {
+	width: 100%;
+}
+
+div.side {
+	width:100%;
+	color: black;
+}
+
+.footer {
+	width:100%;
+}
+
+.logo {
+	max-width: 150px;
+}
+.raket {
+	max-width: 200px;
+	height: 100px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'header header header header'
+		'main main main main'
+		'side side side side'
+		'menu menu menu menu';
+	grid-gap:2px;
+}
+
+.grid-container > div {
+	background-color: black;
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+a {
+  color: white; 
+  font: 12px/12px D-DIN-Bold,Arial,Verdana,sans-serif;
+}
+
+a:hover {
+	color: #384c56;
+}
+
+p {
+	color: white;
+	font-size: 12px;
+	font: 12px/12px D-DIN-Bold,Arial,Verdana,sans-serif;
+}
+
+h2 {
+	color: white;
+	font: 20px/20px D-DIN-Bold,Arial,Verdana,sans-serif;
+}
+
+ #wakker {
+	position: relative;
+	width: 400px;
+	height: 270px;
+	background-color: #333333;
+	overflow: hidden;
+}
+
+#astronaut {
+	top: 20px;
+	left: 20px;
+	width: 200x;
+	height: 160px;
+	transition: transform 1.5s ease-in;
+}
+
+img#achtergrond {
+	position: relative;
+	width: 100%;
+	height: 270px;
+	background-color: black;
+	overflow: hidden;
+	align-items: center;
+}
+
+img#astronaut {
+	position: absolute;
+}
+
+#wakker:hover #astronaut {
+	transform:  translateX(100%);
+}
+
+@media only screen and (min-width: 600px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+			'header header header'
+			'menu main main'
+			'menu side side';
+	}
+
+	.footer {
+		width: 100%;
+		height: 550px;
+	}
+
+	section#wakker {
+	width: 600px;
+	align-items: center;
+	}
+
+
+	img#achtergrond {
+		width: 100%;
+		align-items: center;
+	}
+	
+	.side {
+	width: 100%;
+	}
+
+	.footer {
+	width: 90%;
+	}
+
+	.header {
+	width:100%;
+	height: 100px;
+	}
+
+	#clock {
+		height: 250px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+			'header header header'
+			'side side main'
+			'main main main';
+		grid-gap: 2px;
+		padding: 5px;
+		margin: 5px;
+	}
+
+	.raket {
+		max-width: 400px;
+	}	
+
+	.footer {
+	width: 90%;
+	height: 250px;
+	}
+
+	img#achtergrond {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
+
+}
+
+
+
+
+
+
+
